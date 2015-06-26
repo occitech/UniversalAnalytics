@@ -1,4 +1,4 @@
-<!--- Universal Analytics Start --->
+<!-- Universal Analytics Start -->
 <?php $this->JS = Mage::getSingleton('baua/js'); ?>
 <?php $itemsCollection = Mage::getSingleton('checkout/session')->getQuote()->getItemsCollection(); ?>
 <?php $_helper = Mage::helper('baua') ?>
@@ -68,9 +68,9 @@
             // that functionality here.
             this.currentStep = section;
 
-            this.gotoSectionparent(section);
+            this.gotoSectionparent(section, reloadProgressBlock);
         };
     </script>
 
 <?php endif ?>
-<!--- Universal Analytics End --->
+<!-- Universal Analytics End -->
