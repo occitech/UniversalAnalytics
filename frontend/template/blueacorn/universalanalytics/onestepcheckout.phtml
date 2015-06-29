@@ -1,4 +1,4 @@
-<!--- Universal Analytics Start --->
+<!--- Universal Analytics Start -->
 <?php $this->JS = Mage::getSingleton('baua/js'); ?>
 <?php $itemsCollection = Mage::getSingleton('checkout/session')->getQuote()->getItemsCollection(); ?>
 <?php $_helper = Mage::helper('baua') ?>
@@ -63,6 +63,10 @@
             <?php endforeach; ?>
             <?php echo $this->JS->generateGoogleJS('send', 'pageview')?>
 
+            if (reloadProgressBlock) {
+                this.reloadProgressBlock(this.currentStep);
+            }
+
             // Older versions of Magento are completely lacking the
             // currentStep variable, so we're re-implementing some of
             // that functionality here.
@@ -73,4 +77,4 @@
     </script>
 
 <?php endif ?>
-<!--- Universal Analytics End --->
+<!--- Universal Analytics End -->
