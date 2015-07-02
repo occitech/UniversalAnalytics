@@ -18,7 +18,8 @@ class BlueAcorn_UniversalAnalytics_Model_Monitor {
     /**
      * Constructor, sets up a shortcut variable for the main helper
      * class.
-     *
+     * 
+     * Adding some extra nonsense here
      * @name __construct
      */
     public function __construct() {
